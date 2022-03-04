@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: JS Monthly
+title: JavaScript Monthly
 subtitle:
 description:
 author: JS Community Chengdu
@@ -12,9 +12,9 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://thoughtworksinc.github.io/JS-Monthly-Chengdu/
-root: /JS-Monthly-Chengdu
-permalink: :year/:month/:day/:title/
+url: https://thoughtworks-js-community-chengdu.github.io/js-monthly
+root: /js-monthly
+permalink: :year/:month
 permalink_defaults:
 
 # Directory
@@ -68,7 +68,7 @@ theme: tranquilpeak
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:ThoughtWorksInc/JS-Monthly-Chengdu.git
+  repo: git@github.com:thoughtworks-js-community-chengdu/js-monthly.git
   branch: gh-pages
 
 #RSS
