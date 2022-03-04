@@ -1,66 +1,61 @@
-@import
-    'utils/fonts',
-    'utils/variables';
+@import 'source/_css/utils/fonts',
+'source/_css/utils/variables';
 
-@import
-    'utils/mixins/bottom-bar',
-    'utils/mixins/button',
-    'utils/mixins/category',
-    'utils/mixins/form',
-    'utils/mixins/header',
-    'utils/mixins/main',
-    'utils/mixins/opacity',
-    'utils/mixins/post-header-cover',
-    'utils/mixins/prefix',
-    'utils/mixins/share-options-bar',
-    'utils/mixins/sidebar',
-    'utils/mixins/tag';
+@import 'source/_css/utils/mixins/bottom-bar',
+'source/_css/utils/mixins/button',
+'source/_css/utils/mixins/category',
+'source/_css/utils/mixins/form',
+'source/_css/utils/mixins/header',
+'source/_css/utils/mixins/main',
+'source/_css/utils/mixins/opacity',
+'source/_css/utils/mixins/post-header-cover',
+'source/_css/utils/mixins/prefix',
+'source/_css/utils/mixins/share-options-bar',
+'source/_css/utils/mixins/sidebar',
+'source/_css/utils/mixins/tag';
 
-@import
-    'base/base';
+@import 'source/_css/base/base';
 
-@import 'layouts/about',
-'layouts/blog',
-'layouts/bottom-bar',
-'layouts/cover',
-'layouts/footer',
-'layouts/header',
-'layouts/main',
-'layouts/sidebar';
+@import 'source/_css/layouts/about',
+'source/_css/layouts/blog',
+'source/_css/layouts/bottom-bar',
+'source/_css/layouts/cover',
+'source/_css/layouts/footer',
+'source/_css/layouts/header',
+'source/_css/layouts/main',
+'source/_css/layouts/sidebar';
 
-@import
-    'components/alert',
-    'components/archive',
-    'components/box',
-    'components/button',
-    'components/caption',
-    'components/code',
-    'components/figure',
-    'components/form',
-    'components/hide',
-    'components/highlight-text',
-    'components/icon',
-    'components/image-gallery',
-    'components/link',
-    'components/main-content',
-    'components/markdown',
-    'components/media',
-    'components/modal',
-    'components/pagination',
-    'components/post',
-    'components/post-actions',
-    'components/pullquote',
-    'components/post-header-cover',
-    'components/postShorten',
-    'components/share-options-bar',
-    'components/tag',
-    'components/text',
-    'components/tooltip',
-    'components/video';
+@import 'source/_css/components/alert',
+'source/_css/components/archive',
+'source/_css/components/box',
+'source/_css/components/button',
+'source/_css/components/caption',
+'source/_css/components/code',
+'source/_css/components/fancybox',
+'source/_css/components/figure',
+'source/_css/components/form',
+'source/_css/components/hide',
+'source/_css/components/highlight-text',
+'source/_css/components/icon',
+'source/_css/components/image-gallery',
+'source/_css/components/link',
+'source/_css/components/main-content',
+'source/_css/components/markdown',
+'source/_css/components/media',
+'source/_css/components/modal',
+'source/_css/components/pagination',
+'source/_css/components/post',
+'source/_css/components/post-actions',
+'source/_css/components/pullquote',
+'source/_css/components/post-header-cover',
+'source/_css/components/postShorten',
+'source/_css/components/share-options-bar',
+'source/_css/components/tag',
+'source/_css/components/text',
+'source/_css/components/tooltip',
+'source/_css/components/video';
 
-@import
-    'pages/search';
+@import 'source/_css/pages/search';
 
-@import
-    'themes/hljs-tranquilpeak',
-    'themes/hljs-custom';
+@import 'source/_css/themes/hljs-tranquilpeak',
+'source/_css/themes/hljs-custom';

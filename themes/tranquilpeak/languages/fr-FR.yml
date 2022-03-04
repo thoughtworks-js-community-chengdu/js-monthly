@@ -41,10 +41,15 @@ global:
         zero: "aucun tags trouvé"
         one: "1 tag trouvé"
         other: "{n} tags trouvés"
+    read_more_about_author: "En savoir plus sur l'auteur"
+    zoom_in_on_picture: "Zoomer sur l'image"
+    go_to_homepage: "Allez à la page principale"
+    open_link: "Ouvrir le lien"
+    open_post: "Ouvrir l'article"
 
 pagination:
-    page: "page"
-    of: "sur"
+    page: "page %d"
+    of: "sur %d"
     newer_posts: "POSTS RÉCENTS"
     older_posts: "POSTS ANCIENTS"
     previous: "PRÉCÉDENT"
@@ -58,6 +63,10 @@ post:
     read_more: "Continuer"
     go_to_website: "Aller au site web"
     comment_and_share: "Commenter et partager"
+    gallery: "Galerie"
+    image:
+        one: "image"
+        other: "%d images"
 
 author:
     # Votre biographie (le Markdown et HTML sont supportés)

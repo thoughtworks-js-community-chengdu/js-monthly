@@ -10,7 +10,7 @@ global:
     archives: "Архив"
     search: "Поиск"
     about: "Об авторе"
-    author_picture: "Авторская фотография"
+    author_picture: "Фотография автора"
     github: "GitHub"
     stack_overflow: "Stack Overflow"
     twitter: "Twitter"
@@ -43,6 +43,11 @@ global:
         zero: "Теги не найдены"
         one: "Найден 1 тег"
         other: "Тегов найдено: {n}"
+    read_more_about_author: "Узнайте больше об авторе"
+    zoom_in_on_picture: "Увеличить картинку"
+    go_to_homepage: "Вернуться на домашнюю страницу"
+    open_link: "открыть ссылку"
+    open_post: "открыть пост"
 
 pagination:
     page: "Страница %d"
@@ -60,6 +65,10 @@ post:
     read_more: "Читать далее"
     go_to_website: "Перейти на сайт"
     comment_and_share: "Обсудить и поделиться"
+    gallery: "галерея"
+    image:
+        one: "образ"
+        other: "%d изображений"
 
 author:
     # Расскажите немного о себе (поддерживаются Markdown и HTML)
