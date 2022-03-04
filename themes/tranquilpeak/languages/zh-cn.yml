@@ -73,6 +73,6 @@ post:
 
 author:
     # 你的个人简介 (支持 Markdown 和 HTML 语法)
-    bio: ""
+    bio: "JavaScript 月刊是为前端和 JS 开发者提供前沿资讯的一项活动"
     # 你的工作简介
-    job: ""
+    job: "Thoughtworks"

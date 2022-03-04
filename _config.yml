@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: JS Monthly Chengdu
+title: JS Monthly
 subtitle:
 description:
 author: JS Community Chengdu
-language: en
-timezone:
+language: zh-cn
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://thoughtworksinc.github.io/JS-Monthly-Chengdu/
+url: https://thoughtworksinc.github.io/JS-Monthly-Chengdu/
 root: /JS-Monthly-Chengdu
 permalink: :year/:month/:day/:title/
 permalink_defaults:

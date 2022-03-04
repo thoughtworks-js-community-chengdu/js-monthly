@@ -29,67 +29,67 @@ image_dir: assets/images
 #                icon: home     # CSS class names of the Font Awesome icon
 #                               # Go to https://fontawesome.com/icons?d=gallery&m=free to find icons you want
 sidebar:
-    menu:
-        home:
-            title: global.home
-            url: /
-            icon: fa fa-home
-        categories:
-            title: global.categories
-            url: /all-categories
-            icon: fa fa-bookmark
-        tags:
-            title: global.tags
-            url: /all-tags
-            icon: fa fa-tags
-        archives:
-            title: global.archives
-            url: /all-archives
-            icon: fa fa-archive
-        search:
-            title: global.search
-            url: "#search"
-            icon: fa fa-search
-            # `open-algolia-search` classes are used to open algolia search modal
-            class: open-algolia-search
-        about:
-            title: global.about
-            url: "#about"
-            icon: fa fa-question
-    author_links:
-        github:
-            title: global.github
-            url: https://github.com/
-            icon: fab fa-github
-        stack_overflow:
-            title: global.stack_overflow
-            url: http://stackoverflow.com/users
-            icon: fab fa-stack-overflow
-        twitter:
-            title: global.twitter
-            url: https://twitter.com/
-            icon: fab fa-twitter
-        facebook:
-            title: global.facebook
-            url: https://facebook.com/
-            icon: fab fa-facebook
-        google_plus:
-            title: global.google_plus
-            url: https://plus.google.com/
-            icon: fab fa-google-plus
-        linked_in:
-            title: global.linkedin
-            url: https://www.linkedin.com/profile/
-            icon: fab fa-linkedin
-        mail:
-            title: global.mail
-            url: mailto
-            icon: fa fa-envelope
+  menu:
+    home:
+      title: global.home
+      url: /
+      icon: fa fa-home
+    #        categories:
+    #            title: global.categories
+    #            url: /all-categories
+    #            icon: fa fa-bookmark
+    #        tags:
+    #            title: global.tags
+    #            url: /all-tags
+    #            icon: fa fa-tags
+    archives:
+      title: global.archives
+      url: /all-archives
+      icon: fa fa-archive
+    search:
+      title: global.search
+      url: "#search"
+      icon: fa fa-search
+      # `open-algolia-search` classes are used to open algolia search modal
+      class: open-algolia-search
+    about:
+      title: global.about
+      url: "#about"
+      icon: fa fa-question
+  author_links:
+    github:
+      title: global.github
+      url: https://github.com/ThoughtWorksInc/JS-Monthly-Chengdu/
+      icon: fab fa-github
+    #        stack_overflow:
+    #            title: global.stack_overflow
+    #            url: http://stackoverflow.com/users
+    #            icon: fab fa-stack-overflow
+    #        twitter:
+    #            title: global.twitter
+    #            url: https://twitter.com/
+    #            icon: fab fa-twitter
+    #        facebook:
+    #            title: global.facebook
+    #            url: https://facebook.com/
+    #            icon: fab fa-facebook
+    #        google_plus:
+    #            title: global.google_plus
+    #            url: https://plus.google.com/
+    #            icon: fab fa-google-plus
+    #        linked_in:
+    #            title: global.linkedin
+    #            url: https://www.linkedin.com/profile/
+    #            icon: fab fa-linkedin
+    mail:
+      title: global.mail
+      url: "mailto:js-china@thoughtworks.com"
+      icon: fa fa-envelope
+  rss:
     rss:
-        rss:
-            title: global.rss
-            url: /atom.xml
-            icon: fa fa-rss
+      title: global.rss
+      url: /atom.xml
+      icon: fa fa-rss
 
 
 # --------------------
@@ -105,10 +105,10 @@ sidebar:
 #     icon: "fa fa-search"
 #     class: open-algolia-search
 header:
-    right_link:
-        url: /#about
-        icon:
-        class:
+  right_link:
+    url: /#about
+    icon:
+    class:
 
 
 # ------
@@ -117,21 +117,21 @@ header:
 
 # Your biography and your job is editable in each languages files in `languages` folder
 author:
-    email:
-    location:
-    # Your profile picture located in folder `source/_images/` (development)
-    # or in `source/assets/images/` (production)
-    # or you can use an external url
-    # Overwritten by your gravatar image if `gravatar_email` is filled
-    picture:
-    # Your Twitter username without the @. E.g : `tranquilpeak`
-    twitter:
-    # Your personal google plus profile id, not your blog or business page id.
-    # E.g : `+JohnDoe` or `123812884128439`
-    google_plus:
-    # Your businnes google plus profile id. If not provided, personal will be used instead.
-    # E.g : `+Tranquilpeak` or `123812884128439`
-    google_plus_business:
+  email: js-china@thoughtworks.com
+  location: Chengdu
+  # Your profile picture located in folder `source/_images/` (development)
+  # or in `source/assets/images/` (production)
+  # or you can use an external url
+  # Overwritten by your gravatar image if `gravatar_email` is filled
+  picture: https://avatars3.githubusercontent.com/u/168376?v=3&s=200
+  # Your Twitter username without the @. E.g : `tranquilpeak`
+  #  twitter:
+  # Your personal google plus profile id, not your blog or business page id.
+  # E.g : `+JohnDoe` or `123812884128439`
+  #  google_plus:
+  # Your businnes google plus profile id. If not provided, personal will be used instead.
+  # E.g : `+Tranquilpeak` or `123812884128439`
+#  google_plus_business:
 
 
 # -------------
@@ -150,7 +150,7 @@ author:
 # large sidebar is swiped on all lower screens
 # 5: Display header bar on all screens and large sidebar is swiped on large screen
 # 6: Display header bar on all screens and medium sidebar is swiped
-sidebar_behavior: 1
+sidebar_behavior: 2
 # Hide sidebar on all article page to let article take full width to improve reading, and
 # enjoy wide images and cover images. (true: enable, false: disable)
 clear_reading: true
@@ -191,45 +191,45 @@ disqus_shortname:
 # Your Gitment information
 # Read https://github.com/imsun/gitment#get-started to setup Gitment
 gitment:
-    # Switch
-    enable: false
-    # Your Github ID (Github username):
-    github_id:
-    # The repo to store comments:
-    repo:
-    # Your client ID:
-    client_id:
-    # Your client secret:
-    client_secret:
-    # The attribute of posts to use to link them to GitHub issues.
-    # See all attributes: https://hexo.io/docs/variables#Page-Variables
-    # `path` is recommended because the identifier needs to be unique and shorter than 50 characters.
-    post_identifier: permalink
+  # Switch
+  enable: false
+  # Your Github ID (Github username):
+  github_id:
+  # The repo to store comments:
+  repo:
+  # Your client ID:
+  client_id:
+  # Your client secret:
+  client_secret:
+  # The attribute of posts to use to link them to GitHub issues.
+  # See all attributes: https://hexo.io/docs/variables#Page-Variables
+  # `path` is recommended because the identifier needs to be unique and shorter than 50 characters.
+  post_identifier: permalink
 
 # Your Gitalk information
 # Read https://github.com/gitalk/gitalk#options to set up Gitalk
 gitalk:
-    # Switch
-    enable: false
-    # Your client ID:
-    client_id:
-    # Your client secret:
-    client_secret:
-    # Your Github ID (Github username):
-    owner:
-    # The repo to store comments:
-    repo:
-    # The attribute of posts to use to link them to GitHub issues.
-    # See all attributes: https://hexo.io/docs/variables#Page-Variables
-    # `path` is recommended because the identifier needs to be unique and shorter than 50 characters.
-    post_identifier: path
-    # See all options: https://github.com/gitalk/gitalk#options
-    options:
-        language: "en"
-        perPage: 10
-        distractionFreeMode: false
-        enableHotKey: true
-        pagerDirection: "first"
+  # Switch
+  enable: false
+  # Your client ID:
+  client_id:
+  # Your client secret:
+  client_secret:
+  # Your Github ID (Github username):
+  owner:
+  # The repo to store comments:
+  repo:
+  # The attribute of posts to use to link them to GitHub issues.
+  # See all attributes: https://hexo.io/docs/variables#Page-Variables
+  # `path` is recommended because the identifier needs to be unique and shorter than 50 characters.
+  post_identifier: path
+  # See all options: https://github.com/gitalk/gitalk#options
+  options:
+    language: "en"
+    perPage: 10
+    distractionFreeMode: false
+    enableHotKey: true
+    pagerDirection: "first"
 
 # -------------------
 # Integrated services
@@ -269,15 +269,15 @@ fb_app_id:
 #     share_on_foo_bar: "Share on Foo Bar"
 # ```
 sharing_options:
-    facebook:
-        icon: "fab fa-facebook"
-        url: "https://www.facebook.com/sharer/sharer.php?u={{post.permalink}}"
-    twitter:
-        icon: "fab fa-twitter"
-        url: "https://twitter.com/intent/tweet?text={{post.permalink}}"
-    google_plus:
-        icon: "fab fa-google-plus"
-        url: "https://plus.google.com/share?url={{post.permalink}}"
+#  facebook:
+#    icon: "fab fa-facebook"
+#    url: "https://www.facebook.com/sharer/sharer.php?u={{post.permalink}}"
+#  twitter:
+#    icon: "fab fa-twitter"
+#    url: "https://twitter.com/intent/tweet?text={{post.permalink}}"
+#  google_plus:
+#    icon: "fab fa-google-plus"
+#    url: "https://plus.google.com/share?url={{post.permalink}}"
 # Business Social Networks
 #    linkedin:
 #        icon: "fab fa-linkedin"
