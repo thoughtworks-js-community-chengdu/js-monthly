@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://thoughtworks-js-community-chengdu.github.io/js-monthly
 root: /js-monthly
-permalink: :year/:month
+permalink: :year/:month/
 permalink_defaults:
 
 # Directory
