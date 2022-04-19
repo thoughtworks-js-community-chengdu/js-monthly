@@ -6,8 +6,9 @@ node_modules/
 public/
 .deploy*/
 themes/*/node_modules/
-email/.credentical
+email/.credential
 email/.token
+email/email.html
 .history
 
 .idea

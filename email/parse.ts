@@ -6,18 +6,29 @@ const readline = require('readline')
 
 const swig = require('swig')
 
-module.exports = function (file, subject, issue_text, editors) {
-  const issue = fs.createReadStream(path.resolve(process.cwd(), file), 'utf-8')
+interface Article {
+  title?: string
+  link?: string
+  description?: string
+}
+
+interface Category {
+  name?: string
+  articles?: Article[]
+}
+
+module.exports = function (file, subject, issue_number, editors) {
+  const issue = fs.createReadStream(path.join(__dirname, '..', file), 'utf-8')
 
   const meta = {
     subject: subject,
-    issue_text: issue_text,
-    categories: [],
-    editors: editors && editors.split(',') || []
+    issue_number: issue_number,
+    categories: [] as Category[],
+    editors: editors?.split(',') || [] as string[]
   }
 
-  let category = {}
-  let artile = {}
+  let category: Category = {}
+  let article: Article = {}
 
   let inCategory = false
   let inArticle = false
@@ -39,33 +50,31 @@ module.exports = function (file, subject, issue_text, editors) {
       return
     }
 
-    linkTextMatch = line.match(/(?:__|[*#])|\[(.*?)\]\((.*?)\)/)
+    let linkTextMatch = line.match(/(?:__|[*#])|\[(.*?)\]\((.*?)\)/)
 
     if (linkTextMatch) {
       inArticle = true
-      artile.title = linkTextMatch[1]
-      artile.link = linkTextMatch[2]
+      article.title = linkTextMatch[1]
+      article.link = linkTextMatch[2]
       return
     }
 
     if (inArticle) {
-      artile.description = line
-      category.articles.push(artile)
-      artile = {}
+      article.description = line
+      category.articles?.push(article)
+      article = {}
       inArticle = false
       return
     }
   })
 
-  var util = require('util')
-
   return new Promise((resolve, reject) => {
     rl.on('close', function () {
       meta.categories.push(category)
 
-      const result = swig.renderFile(path.resolve(process.cwd(), './email/email.tpl.html'), meta)
+      const result = swig.renderFile(path.join(__dirname, 'email.tpl.html'), meta)
 
-      fs.writeFile(path.resolve(process.cwd(), './email/email.html'), result, (err) => {
+      fs.writeFile(path.join(__dirname, 'email.html'), result, (err) => {
         if (err) {
           reject(err);
         }
