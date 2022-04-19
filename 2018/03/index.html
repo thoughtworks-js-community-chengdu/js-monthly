@@ -1,0 +1,787 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="JavaScript Monthly">
+    <title>JavaScript Monthly 第二十五期 - JavaScript Monthly</title>
+    <meta name="author" content="JS Community Chengdu">
+    
+    
+    
+        
+            <link rel="alternate" type="application/atom+xml" title="RSS" href="/js-monthly/atom.xml">
+        
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"JS Community Chengdu","sameAs":["https://github.com/thoughtworks-js-community-chengdu","mailto:js-china@thoughtworks.com"],"image":"https://avatars3.githubusercontent.com/u/168376?v=3&s=200"},"articleBody":"NEWSWebpack 4 Released!新特性：更快的编译，默认配置模式，再见 CommonsChunkPlugin\nReact Native Relicense喜大普奔，FB 终于将React Native也转向 MIT 许可了\n\n\nReact 16.3 新特性介绍React 16 将引入 Context API，更换新的生命周期方法\nES2018 定案ES2018 近日最后一个特性定案，预计6月发布新版本\nREPOSHygen一个可扩展的样板代码文件生成器\nProton一款 JS 粒子引擎\nPressure.js👇💥 JavaScript library for handling Force Touch, 3D Touch, and Pointer Pressure.\nTECHFunction as Child Components试试把用函数作为组件的 Children 吧\nReact的 Inline 函数与性能反思在 React 中过早的不成熟性能优化\nWeb 性能优化之 Webpack 工具指南前端优化的主要方面都有介绍\n揭秘前端字符的戏精之路有意思的 Unicode 字符\n","dateCreated":"2018-03-02T15:04:57+08:00","dateModified":"2022-01-14T13:37:15+08:00","datePublished":"2018-03-02T15:04:57+08:00","description":"NEWSWebpack 4 Released!新特性：更快的编译，默认配置模式，再见 CommonsChunkPlugin\nReact Native Relicense喜大普奔，FB 终于将React Native也转向 MIT 许可了","headline":"JavaScript Monthly 第二十五期","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://thoughtworks-js-community-chengdu.github.io/js-monthly/2018/03/"},"publisher":{"@type":"Organization","name":"JS Community Chengdu","sameAs":["https://github.com/thoughtworks-js-community-chengdu","mailto:js-china@thoughtworks.com"],"image":"https://avatars3.githubusercontent.com/u/168376?v=3&s=200","logo":{"@type":"ImageObject","url":"https://avatars3.githubusercontent.com/u/168376?v=3&s=200"}},"url":"https://thoughtworks-js-community-chengdu.github.io/js-monthly/2018/03/","keywords":"monthly"}</script>
+    <meta name="description" content="NEWSWebpack 4 Released!新特性：更快的编译，默认配置模式，再见 CommonsChunkPlugin React Native Relicense喜大普奔，FB 终于将React Native也转向 MIT 许可了">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="JavaScript Monthly 第二十五期">
+<meta property="og:url" content="https://thoughtworks-js-community-chengdu.github.io/js-monthly/2018/03/index.html">
+<meta property="og:site_name" content="JavaScript Monthly">
+<meta property="og:description" content="NEWSWebpack 4 Released!新特性：更快的编译，默认配置模式，再见 CommonsChunkPlugin React Native Relicense喜大普奔，FB 终于将React Native也转向 MIT 许可了">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-03-02T07:04:57.000Z">
+<meta property="article:modified_time" content="2022-01-14T05:37:15.000Z">
+<meta property="article:author" content="JS Community Chengdu">
+<meta property="article:tag" content="monthly">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://avatars3.githubusercontent.com/u/168376?v=3&amp;s=200"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/js-monthly/assets/css/style-l6rml4bnaper0muqfhrekdypvstee6y1p6cefqvczppnc9mnpfttuhx0el6g.min.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="5">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/js-monthly/"
+            aria-label=""
+        >
+            JavaScript Monthly
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="打开链接: /js-monthly/#about"
+            >
+        
+        
+            <img class="header-picture" src="https://avatars3.githubusercontent.com/u/168376?v=3&amp;s=200" alt="作者的图片"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="5">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a
+                    href="/js-monthly/#about"
+                    aria-label="阅读有关作者的更多信息"
+                >
+                    <img class="sidebar-profile-picture" src="https://avatars3.githubusercontent.com/u/168376?v=3&amp;s=200" alt="作者的图片"/>
+                </a>
+                <h4 class="sidebar-profile-name">JS Community Chengdu</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>JavaScript 月刊是为前端和 JS 开发者提供前沿资讯的一项活动</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/js-monthly/"
+                            
+                            rel="noopener"
+                            title="首页"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/js-monthly/all-archives"
+                            
+                            rel="noopener"
+                            title="归档"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="搜索"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">搜索</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="关于"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/thoughtworks-js-community-chengdu"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="mailto:js-china@thoughtworks.com"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="邮箱"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">邮箱</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/js-monthly/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="5"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            JavaScript Monthly 第二十五期
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2018-03-02T15:04:57+08:00">
+	
+		    3月 02, 2018
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/js-monthly/categories/monthly/">monthly</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <h4 id="NEWS"><a href="#NEWS" class="headerlink" title="NEWS"></a>NEWS</h4><p><a target="_blank" rel="noopener" href="https://medium.com/webpack/webpack-4-released-today-6cdb994702d4">Webpack 4 Released!</a><br>新特性：更快的编译，默认配置模式，再见 CommonsChunkPlugin</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/facebook/react-native/commit/26684cf3adf4094eb6c405d345a75bf8c7c0bf88">React Native Relicense</a><br>喜大普奔，FB 终于将React Native也转向 MIT 许可了</p>
+<span id="more"></span>
+
+<p><a target="_blank" rel="noopener" href="https://medium.com/@baphemot/whats-new-in-react-16-3-d2c9b7b6193b">React 16.3 新特性介绍</a><br>React 16 将引入 Context API，更换新的生命周期方法</p>
+<p><a target="_blank" rel="noopener" href="https://www.infoq.com/news/2018/02/tc39-finalizes-es2018">ES2018 定案</a><br>ES2018 近日最后一个特性定案，预计6月发布新版本</p>
+<h4 id="REPOS"><a href="#REPOS" class="headerlink" title="REPOS"></a>REPOS</h4><p><a target="_blank" rel="noopener" href="http://www.hygen.io/">Hygen</a><br>一个可扩展的样板代码文件生成器</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/a-jie/Proton">Proton</a><br>一款 JS 粒子引擎</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/stuyam/pressure">Pressure.js</a><br>👇💥 JavaScript library for handling Force Touch, 3D Touch, and Pointer Pressure.</p>
+<h4 id="TECH"><a href="#TECH" class="headerlink" title="TECH"></a>TECH</h4><p><a target="_blank" rel="noopener" href="https://medium.com/merrickchristensen/function-as-child-components-5f3920a9ace9">Function as Child Components</a><br>试试把用函数作为组件的 Children 吧</p>
+<p><a target="_blank" rel="noopener" href="https://cdb.reacttraining.com/react-inline-functions-and-performance-bdff784f5578">React的 Inline 函数与性能</a><br>反思在 React 中过早的不成熟性能优化</p>
+<p><a target="_blank" rel="noopener" href="https://developers.google.com/web/fundamentals/performance/webpack/">Web 性能优化之 Webpack 工具指南</a><br>前端优化的主要方面都有介绍</p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/jTSws4W-PDxVgDvePvMO2g">揭秘前端字符的戏精之路</a><br>有意思的 Unicode 字符</p>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-none-link" href="/js-monthly/tags/monthly/" rel="tag">monthly</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/js-monthly/2018/03/"
+                    data-tooltip="JavaScript Monthly 第二十六期"
+                    aria-label="上一篇: JavaScript Monthly 第二十六期"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/js-monthly/2018/02/"
+                    data-tooltip="JavaScript Monthly 第二十四期"
+                    aria-label="下一篇: JavaScript Monthly 第二十四期"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2022 JS Community Chengdu. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/js-monthly/2018/03/"
+                    data-tooltip="JavaScript Monthly 第二十六期"
+                    aria-label="上一篇: JavaScript Monthly 第二十六期"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/js-monthly/2018/02/"
+                    data-tooltip="JavaScript Monthly 第二十四期"
+                    aria-label="下一篇: JavaScript Monthly 第二十四期"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <img id="about-card-picture" src="https://avatars3.githubusercontent.com/u/168376?v=3&amp;s=200" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">JS Community Chengdu</h4>
+        
+            <div id="about-card-bio"><p>JavaScript 月刊是为前端和 JS 开发者提供前沿资讯的一项活动</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Thoughtworks</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker-alt"></i>
+                <br/>
+                Chengdu
+            </div>
+        
+    </div>
+</div>
+
+        
+            <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-times"></i></span>
+            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="/js-monthly/assets/images/logo-algolia-nebula-blue-full.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    />
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">没有找到文章</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="https://thoughtworks-js-community-chengdu.github.io/js-monthly/2015/10/"
+                            aria-label=": JavaScript Monthly 第一期"
+                        >
+                            <h3 class="media-heading">JavaScript Monthly 第一期</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年10月20日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="News"><a href="#News" class="headerlink" title="News"></a>News</h4><hr>
+<p><a target="_blank" rel="noopener" href="http://azzfun.us12.list-manage1.com/track/click?u=a172c6619bdec9e40bef3dbd5&id=27674fea37&e=81238108bb">React Native For Android 架构初探</a><br>Facebook刚流出的React Native Android, 已经有团体抢先试水</p>
+<p><a target="_blank" rel="noopener" href="http://azzfun.us12.list-manage1.com/track/click?u=a172c6619bdec9e40bef3dbd5&id=e5f7243fca&e=81238108bb">RAIL，以用户为核心的性能模型</a><br>Google 试图建立一个关于网站载入性能的标准模型Rail</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="https://thoughtworks-js-community-chengdu.github.io/js-monthly/2015/11/"
+                            aria-label=": JavaScript Monthly 第二期"
+                        >
+                            <h3 class="media-heading">JavaScript Monthly 第二期</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年11月20日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="News"><a href="#News" class="headerlink" title="News"></a>News</h4><hr>
+<p><a target="_blank" rel="noopener" href="http://azzfun.us12.list-manage1.com/track/click?u=a172c6619bdec9e40bef3dbd5&id=133f4aa4b9&e=06daca7060">New about Node.js v5</a><br>Node.js 5.0新看点</p>
+<p><a target="_blank" rel="noopener" href="http://azzfun.us12.list-manage.com/track/click?u=a172c6619bdec9e40bef3dbd5&id=2416c4aa21&e=06daca7060">Is Angular 2.0 ready? Soon!</a><br>Angular 2.0 要来了</p>
+<p><a target="_blank" rel="noopener" href="http://azzfun.us12.list-manage.com/track/click?u=a172c6619bdec9e40bef3dbd5&id=4f10275eb3&e=06daca7060">Babel 6.0 release</a><br>Babel 6.0 发布, Babel将会把es6转换工作交给插件, 本身会成为一款Javascript的工具平台</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="https://thoughtworks-js-community-chengdu.github.io/js-monthly/2015/12/"
+                            aria-label=": JavaScript Monthly 第三期"
+                        >
+                            <h3 class="media-heading">JavaScript Monthly 第三期</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2015年12月20日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="News"><a href="#News" class="headerlink" title="News"></a>News</h4><hr>
+<p><a target="_blank" rel="noopener" href="https://github.com/sdc-alibaba/SUI-Mobile">SUI Mobile</a><br>阿里推出IOS风格的精美组件</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="https://thoughtworks-js-community-chengdu.github.io/js-monthly/2016/01/"
+                            aria-label=": JavaScript Monthly 第四期"
+                        >
+                            <h3 class="media-heading">JavaScript Monthly 第四期</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2016年1月20日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="News"><a href="#News" class="headerlink" title="News"></a>News</h4><hr>
+<p><a target="_blank" rel="noopener" href="http://angularjs.blogspot.hk/2015/12/angular-2-beta.html?utm_source=javascriptweekly&utm_medium=email">Angular 2 Beta Released</a><br>Angular 2 Beta 正式发布，准备接受你的检验</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="https://thoughtworks-js-community-chengdu.github.io/js-monthly/2016/02/"
+                            aria-label=": JavaScript Monthly 第五期"
+                        >
+                            <h3 class="media-heading">JavaScript Monthly 第五期</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2016年2月20日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="News"><a href="#News" class="headerlink" title="News"></a>News</h4><hr>
+<p><a target="_blank" rel="noopener" href="https://facebook.github.io/react/blog/2016/01/12/discontinuing-ie8-support.html?utm_source=javascriptweekly&utm_medium=email">React将放弃支持IE8</a><br>随着微软对IE放弃维护，Facebook会逐渐放弃对IE老版本的支持</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="https://thoughtworks-js-community-chengdu.github.io/js-monthly/2016/03/"
+                            aria-label=": JavaScript Monthly 第六期"
+                        >
+                            <h3 class="media-heading">JavaScript Monthly 第六期</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2016年3月20日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="News"><a href="#News" class="headerlink" title="News"></a>News</h4><hr>
+<p><a target="_blank" rel="noopener" href="https://facebook.github.io/react/blog/2016/03/07/react-v15-rc1.html">React V15 预发布</a><br>React即将发布正式版，并优化了底层实现</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=MGuKhcnrqGA&list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY">React Conf</a><br>年度Facebook React大会</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="https://thoughtworks-js-community-chengdu.github.io/js-monthly/2016/04/"
+                            aria-label=": JavaScript Monthly 第七期"
+                        >
+                            <h3 class="media-heading">JavaScript Monthly 第七期</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2016年4月20日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="News"><a href="#News" class="headerlink" title="News"></a>News</h4><hr>
+<p><a target="_blank" rel="noopener" href="https://facebook.github.io/react/blog/2016/04/08/react-v15.0.1.html">React v15.0.1</a><br>React 15 正式发布，修复了15.0.0的一些问题</p>
+<p><a target="_blank" rel="noopener" href="http://blog.npmjs.org/post/142077474335/npm-registry-is-now-fully-https?utm_source=nodeweekly&utm_medium=email">NPM registry 全面支持https</a><br>NPM官网现在全面支持https, 所有原http地址将会重定向到https地址上去</p>
+<p><a target="_blank" rel="noopener" href="http://blog.npmjs.org/post/141905368000/changes-to-npms-unpublish-policy">NPM下架策略变动</a><br>经过之前下架风波，现在只有24小时上线的新包可以无条件下架</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="https://thoughtworks-js-community-chengdu.github.io/js-monthly/2016/05/"
+                            aria-label=": JavaScript Monthly 第八期"
+                        >
+                            <h3 class="media-heading">JavaScript Monthly 第八期</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2016年5月20日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="News"><a href="#News" class="headerlink" title="News"></a>News</h4><hr>
+<p><a target="_blank" rel="noopener" href="https://github.com/angular/angular/blob/master/CHANGELOG.md">Angular 2.0.0 RC</a><br>Angular2 预发布，节奏良好</p>
+<p><a target="_blank" rel="noopener" href="https://nodejs.org/en/blog/release/v6.0.0/">Nodejs 6.0 Release</a><br>Nodejs宣布支持ES6 93%的特性</p>
+<p><a target="_blank" rel="noopener" href="https://vuejs.org/2016/04/27/announcing-2.0/">Announcing Vue.js 2.0</a><br>Vue发布预览版，将支持Virtual DOM和Server Render</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="https://thoughtworks-js-community-chengdu.github.io/js-monthly/2016/06/"
+                            aria-label=": JavaScript Monthly 第九期"
+                        >
+                            <h3 class="media-heading">JavaScript Monthly 第九期</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2016年6月20日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="News"><a href="#News" class="headerlink" title="News"></a>News</h4><hr>
+<p><a target="_blank" rel="noopener" href="http://thoughtworksinc.github.io/JS-Monthly-Chengdu/">Monthly归档</a><br>走过，错过的同学不再后悔</p>
+<p><a target="_blank" rel="noopener" href="http://www.bagevent.com/event/58905">JSConf in Nanjing</a><br>九月三号四号南京Conf，不见不散</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="https://thoughtworks-js-community-chengdu.github.io/js-monthly/2016/07/"
+                            aria-label=": JavaScript Monthly 第十期"
+                        >
+                            <h3 class="media-heading">JavaScript Monthly 第十期</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2016年7月19日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="Tech"><a href="#Tech" class="headerlink" title="Tech"></a>Tech</h4><hr>
+<p><a target="_blank" rel="noopener" href="https://facebook.github.io/react/blog/2016/07/13/mixins-considered-harmful.html">Mixins Considered Harmful</a><br>案例教学：教你如何去除代码中Mixin</p>
+<p><a target="_blank" rel="noopener" href="https://facebook.github.io/react/blog/2016/07/11/introducing-reacts-error-code-system.html">Introducing React’s Error Code System</a><br>简述React Error系统的工作原理</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="没有找到文章"
+                data-message-one="找到 1 篇文章"
+                data-message-other="找到 {n} 篇文章">
+                找到 39 篇文章
+            </p>
+        </div>
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/js-monthly/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/js-monthly/assets/js/script-rwt6laoaellgihaz7qjui0ufsqn6ovtpb519d9kvmarlbcgfapdmhqispkmi.min.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+    
+<script src="/js-monthly/assets/js/moment-with-locales.js"></script>
+
+    
+<script src="/js-monthly/assets/js/algoliasearch.js"></script>
+
+    <script>
+      var algoliaClient = algoliasearch('5MSZX10DRP', '00b2c069303246127b5b729ce98bdca9');
+      var algoliaIndex = algoliaClient.initIndex('my-hexo-blog');
+    </script>
+
+
+    </body>
+</html>
